@@ -1,10 +1,10 @@
 load fisheriris
-xdata = meas(1:100,3:4);
-group = species(1:100);
+xdata = meas(51:end,3:4);
+group = species(51:end);
 
 
-svmStruct = svmtrain(xdata,group, 'ShowPlot',true);
+% svmStruct = svmtrain(xdata,group, 'ShowPlot',true);
 
-% svmStruct = svmtrain(xdata,group,'kernel_function','polynomial', 'ShowPlot',true);
+svmStruct = svmtrain(xdata,group,'kernel_function','rbf', 'ShowPlot',true);
 % % 
 % svmStruct = svmtrain(xdata,group,'kernel_function','mlp', 'ShowPlot',true);
